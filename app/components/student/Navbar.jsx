@@ -1,10 +1,12 @@
 'use client';
-import React from 'react'
+import React, { useContext } from 'react'
 // import { assets } from '../app/assets/assets'
 import Link from 'next/link'
 import { assets } from '@/app/assets/assets'
 import Image from 'next/image'
 import { useClerk,UserButton,useUser } from '@clerk/nextjs'
+import { AppContext } from '@/app/context/AppContext';
+import { useRouter } from 'next/router';
 
 
 
@@ -13,9 +15,11 @@ const Navbar = () => {
   const {openSignIn} = useClerk()
   const {user} = useUser();
 
+
+
   return (
     <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 bg-cyan-100/70`}>
-      <Image src={assets.logo} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
+      <Image onClick={()=> router && router.push('/')} src={assets.logo} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
       {/* this div will be hidden for mobile devices and for medium devices it will have flex */}
       <div className='hidden md:flex items-center gap-5 text-gray-500 '>
         <div className='flex items-center gap-5'>
@@ -41,7 +45,7 @@ const Navbar = () => {
           </>}
         </div>
         {user ? <UserButton />:
-            <button onClick={() => openSignIn()}><Image src={assets.user_icon}/></button>
+            <button onClick={() => openSignIn()}><Image src={assets.user_icon} alt='usericon'/></button>
         }
       </div>
     </div>

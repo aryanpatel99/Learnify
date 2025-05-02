@@ -30,3 +30,10 @@ body {
 *{
   font-family: Outfit;
 }
+
+.text-home-heading-small {
+  @apply text-[28px] leading-[34px];
+}
+.text-home-heading-large {
+  @apply text-[48px] leading-[56px];
+}
