@@ -9,7 +9,8 @@ const Footer = () => {
       <div className='flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white/30'>
         <div className='flex flex-col md:items-start items-center w-full ' >
           {/* <img src={'/newLogo.svg'} alt="logo" /> */}
-          <Image src="/whiteLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
+          {/* <Image src="/whiteLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' /> */}
+          <img src="/whiteLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
           <p className='mt-6 text-center md:text-left text-sm text-white/80 '>Empowering learners with flexible, accessible, and expert-led education for a better future.</p>
         </div>
         <div className='flex flex-col md:items-start items-center w-full '>
