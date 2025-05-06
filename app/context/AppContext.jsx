@@ -13,10 +13,24 @@ const AppContextProvider = (props)=>{
     // const router = useRouter()
 
     const [allCourses, setAllCourses] = useState([])
+    const [isEducator, setIsEducator] = useState(true)
 
     // fetch all courses
     async function fetchAllCourse(){
         setAllCourses(dummyCourses)
+    }
+
+    // function to calculate average rating
+    const calculateRating = (course)=>{
+        if(course.courseRatings.length === 0){
+            return 0
+        }
+        let totalRaitng = 0
+        course.courseRatings.map((rating=>{
+            totalRaitng+= rating.rating
+        }))
+        return totalRaitng / course.courseRatings.length 
+
     }
 
     useEffect(()=>{
@@ -24,7 +38,7 @@ const AppContextProvider = (props)=>{
     },[])
 
     const value = {
-        currency,allCourses,
+        currency,allCourses,calculateRating,isEducator,setIsEducator
         // router
     }
 

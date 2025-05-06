@@ -6,25 +6,29 @@ import { assets } from '@/app/assets/assets'
 import Image from 'next/image'
 import { useClerk,UserButton,useUser } from '@clerk/nextjs'
 import { AppContext } from '@/app/context/AppContext';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 
 
 
 const Navbar = () => {
 
+  const {isEducator} = useContext(AppContext)
+
   const {openSignIn} = useClerk()
   const {user} = useUser();
+  const router = useRouter();
 
 
 
   return (
-    <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 bg-cyan-100/70`}>
-      <Image onClick={()=> router && router.push('/')} src={assets.logo} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
+    <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4  bg-indigo-300/70`}>
+      <Link href={'/'}><Image src="/newLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' /></Link>
       {/* this div will be hidden for mobile devices and for medium devices it will have flex */}
-      <div className='hidden md:flex items-center gap-5 text-gray-500 '>
+      <div className='hidden md:flex items-center gap-5 text-gray-600 '>
         <div className='flex items-center gap-5'>
           {user && <>
-          <button>Become Educator</button> |
+          <button className='cursor-pointer' onClick={()=>router.push('/pages/educator/Dashboard')}>{isEducator?'Educator Dashboard':'Become Educator'}</button> |
           {/* check route */}
           <Link href={'/pages/student/myenrollments'}>MyEnrollments</Link>
           </>}
@@ -36,10 +40,10 @@ const Navbar = () => {
       </div>
       {/* for medium and above screen -> hidden */}
       {/* for phone screens  */}
-      <div className='md:hidden flex items-center gap-2 sm:gap-5 text-gray-500'>
+      <div className='md:hidden flex items-center gap-2 sm:gap-5 text-gray-600'>
         <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
         {user && <>
-          <button>Become Educator</button> |
+          <button className='cursor-pointer' onClick={()=>router.push('/pages/educator/Dashboard')}>{isEducator?'Educator Dashboard':'Become Educator'}</button> |
           {/* check route */}
           <Link href={'/pages/student/myenrollments'}>MyEnrollments</Link>
           </>}

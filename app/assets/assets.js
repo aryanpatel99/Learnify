@@ -42,6 +42,7 @@ import profile_img from './profile_img.png'
 import profile_img2 from './profile_img2.png'
 import profile_img3 from './profile_img3.png'
 import lesson_icon from './lesson_icon.svg'
+// import newLogo from './public/newLogo.svg'
 
 
 export const assets = {
@@ -88,7 +89,8 @@ export const assets = {
     profile_img3,
     play_icon,
     blue_tick_icon,
-    lesson_icon
+    lesson_icon,
+    // newLogo
 }
 
 export const dummyEducatorData = {
@@ -107,23 +109,61 @@ export const dummyTestimonial = [
         role: 'SWE 1 @ Amazon',
         image: assets.profile_img_1,
         rating: 5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I\'ve been using Learnify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
     },
     {
         name: 'Richard Nelson',
         role: 'SWE 2 @ Samsung',
         image: assets.profile_img_2,
         rating: 4,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I\'ve been using Learnify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
     },
     {
         name: 'James Washington',
         role: 'SWE 2 @ Google',
         image: assets.profile_img_3,
         rating: 4.5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I\'ve been using Learnify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
     },
 ];
+
+export const testimonials = [
+    {
+      quote:
+        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+      name: "Sarah Chen",
+      designation: "SWE 1 @ Amazon",
+      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      quote:
+        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+      name: "Michael Rodriguez",
+      designation: "CTO at InnovateSphere",
+      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      quote:
+        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+      name: "Emily Watson",
+      designation: "Operations Director at CloudScale",
+      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      quote:
+        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+      name: "James Kim",
+      designation: "SWE 2 @ Google",
+      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      quote:
+        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+      name: "Lisa Thompson",
+      designation: "VP of Technology at FutureNet",
+      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
 
 export const dummyDashboardData = {
     "totalEarnings": 707.38,
