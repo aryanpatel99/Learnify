@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Learnify",
   description: "Explore, compare, and choose the right course.",
+  icons: {
+    icon: '/Isolation_Mode.svg',
+  },
 };
 
 const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
