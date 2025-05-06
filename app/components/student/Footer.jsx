@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { assets } from '@/app/assets/assets'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import SvgComp from '../SvgComp'
 const Footer = () => {
   return (
     <footer className='bg-gray-900 md:px-36 text-left w-full mt-10'>
@@ -10,7 +11,8 @@ const Footer = () => {
         <div className='flex flex-col md:items-start items-center w-full ' >
           {/* <img src={'/newLogo.svg'} alt="logo" /> */}
           {/* <Image src="/whiteLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' /> */}
-          <img src="/whiteLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
+          {/* <img src="/whiteLogo.svg" width={28} height={28} alt="Logo" className='w-28 lg:w-32 cursor-pointer' /> */}
+<SvgComp/>
           <p className='mt-6 text-center md:text-left text-sm text-white/80 '>Empowering learners with flexible, accessible, and expert-led education for a better future.</p>
         </div>
         <div className='flex flex-col md:items-start items-center w-full '>
@@ -27,7 +29,7 @@ const Footer = () => {
           <h2 className='font-semibold text-white mb-5'>Subscribe to our newsletter</h2>
           <p className='text-sm text-white/80'>Get the latest updates, course launches, and special offers delivered straight to your inbox. Join our learning community today!</p>
           <div className='flex items-center gap-2 pt-4'>
-            <input type='email' placeholder='Enter your email' className='border border-gray-500/30 bg-gray-800 text-gray-500 placeholder-gray-500 outline-none w-64 h-9 rounded px-2 text-sm'/>
+            <input type='email' placeholder='Enter your email' className='border border-gray-500/30 bg-gray-800 text-gray-500 placeholder-gray-500 outline-none w-64 h-9 rounded px-2 text-sm' />
             <Button variant={'secondary'}>Subscribe</Button>
           </div>
 
