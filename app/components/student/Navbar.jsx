@@ -38,7 +38,8 @@ const Navbar = () => {
           {user && <>
           <button className='cursor-pointer' onClick={()=>router.push('/pages/educator/Dashboard')}>{isEducator?'Educator Dashboard':'Become Educator'}</button> |
           {/* check route */}
-          <Link href={'/pages/student/myenrollments'}>MyEnrollments</Link>
+          <Link href={'/pages/student/myenrollments'}>MyEnrollments</Link> |
+          <Link href={'/pages/student/pricing'}>Pricing</Link>
           </>}
         </div>
 

@@ -4,16 +4,16 @@ import { assets } from '@/app/assets/assets'
 import { AppContext } from '@/app/context/AppContext'
 import Link from 'next/link'
  
-const NewCourseCard = ({course }) => {
+const CourseCard = ({course }) => {
 
   const {currency, calculateRating } = useContext(AppContext)
   return (
-    <Link  href={'/course/'+ course._id } onClick={()=> scrollTo(0,0)} className=' border border-gray-500/30 pb-6 overflow-hidden rounded-lg'>
-      <Image className='w-full' src={course.pic} alt='couresThumbnail' width={1280}
+    <Link  href={'/courselist/'+ course._id } onClick={()=> scrollTo(0,0)} className=' border border-gray-500/30 pb-6 overflow-hidden rounded-lg hover:shadow-2xl'>
+      <Image className='w-full' src={course.courseThumbnail} alt='couresThumbnail' width={1280}
   height={720} />
       <div className='p-3 text-left'>
-        <h3 className='text-base font-semibold'>{course.title}</h3>
-        <p className='text-gray-500'>{course.category}</p>
+        <h3 className='text-base font-semibold'>{course.courseTitle}</h3>
+        <p className='text-gray-500'>{course.educator.name}</p>
         <div className='flex items-center space-x-2'>
           <p>{calculateRating(course)}</p>
           <div className='flex'>
@@ -21,7 +21,7 @@ const NewCourseCard = ({course }) => {
               <Image className='w-3.5 h-3.5' key={i} src={i< Math.floor(calculateRating(course))?assets.star:assets.star_blank} alt='star'/>
             )) }
           </div>
-          <p className='text-gray-500'>({course.rating})</p>
+          <p className='text-gray-500'>({course.courseRatings.length})</p>
         </div>
         <p className='text-base font-semibold text-gray-800'>{currency}{(course.coursePrice - course.discount*course.coursePrice/100).toFixed(2)}</p>
       </div>
@@ -29,4 +29,4 @@ const NewCourseCard = ({course }) => {
   )
 }
 
-export default NewCourseCard
+export default CourseCard

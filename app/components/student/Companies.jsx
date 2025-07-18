@@ -10,7 +10,7 @@ const Companies = () => {
         <Image src={assets.microsoft_logo} alt='microsoft'  className='w-20 md:w-28'/>
         <Image src={assets.walmart_logo} alt='walmart_logo' className='w-20 md:w-28'/>
         <Image src={assets.accenture_logo} alt='accenture_logo' className='w-20 md:w-28'/>
-        <Image src={assets.adobe_logo} alt='adobe_logo' className='w-20 md:w-28'/>
+        {/* <Image src={assets.adobe_logo} alt='adobe_logo' className='w-20 md:w-28'/> */}
         <Image src={assets.paypal_logo} alt='paypal_logo' className='w-20 md:w-28'/>
       </div>
     </div>
