@@ -4,10 +4,14 @@ import '../../../components/student/PricingCard.css'
 import '../../../components/student/PricingCard'
 import PricingCard from '../../../components/student/PricingCard'
 import { useState } from 'react'
+import Navbar from '@/app/components/student/Navbar'
+import Footer from '@/app/components/student/Footer'
 
 const page = () => {
     const [selectMonthly, setSelectMonthly] = useState(true)
   return (
+    <>
+    <Navbar/>
     <div className='PricingApp'>
         <div className='app-container'>
             <header>
@@ -34,6 +38,8 @@ const page = () => {
 
 
     </div>
+    <Footer/>
+    </>
   )
 }
 
