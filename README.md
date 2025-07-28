@@ -1,3 +1,15 @@
+<h1 align="center">🚨 This Project Has Moved! 🚨</h1>
+
+<p align="center">
+  Please visit the new and updated version of this project here: <br/>
+  <a href="https://github.com/aryanpatel99/Learnify.app"><strong>🔗 Learnify.app (New Repository)</strong></a>
+</p>
+
+<p align="center">
+  Thank you for checking it out!
+</p>
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
